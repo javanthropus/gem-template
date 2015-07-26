@@ -1,0 +1,80 @@
+<%
+  # This is the template file for README.md.  The gemspec details are available
+  # within the _spec_ attribute, and all methods defined in the Rakefile are
+  # also available.  The Rakefile will use this file to regenerate README.md
+  # when necessary.
+-%>
+# Gem Template
+
+<%= word_wrap(spec.summary) %>
+
+## LINKS
+
+* Homepage :: <%= spec.homepage %>
+* Source :: http://example.com/example/gem-template.git
+
+## DESCRIPTION
+
+<%= spec.description -%>
+
+## Features
+
+* Example feature 1.
+* Example feature 2.
+
+## Known Bugs/Limitations
+
+* None so far...
+
+## SYNOPSIS
+
+```ruby
+require 'gem-template'
+
+GemTemplate.hello!
+```
+
+## REQUIREMENTS
+
+<% if spec.runtime_dependencies.empty? -%>
+None
+<% else -%>
+<%   spec.runtime_dependencies.each do |dependency| -%>
+* <%= dependency %>
+<%   end -%>
+<% end -%>
+
+## DEVELOPERS
+
+After checking out the source, run:
+
+    $ bundle install
+    $ bundle exec rake test yard
+
+This will install all dependencies, run the tests/specs, and generate the
+documentation.
+
+## AUTHORS
+
+Thanks to all contributors.  Without your help this project would not exist.
+
+<% spec.authors.zip(spec.email).each do |author, email| -%>
+* <%= author %> :: <%= email %>
+<% end -%>
+
+## Contributing
+
+Contributions for bug fixes, documentation, extensions, tests, etc. are
+encouraged.
+
+1. Clone the repository.
+2. Fix a bug or add a feature.
+3. Add tests for the fix or feature.
+4. Make a pull request.
+
+## LICENSE
+
+```
+<%= File.read('LICENSE') -%>
+```
+<% # vim: set ts=2 sw=2 et: -%>

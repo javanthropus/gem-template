@@ -88,8 +88,8 @@ def file_sub(path, pattern, replacement = nil, &b)
   File.rename(tmp_path, path)
 end
 
-# Updates the version string in the gemspec file and a version.rb file it to the
-# string in _version_.
+# Updates the version string in the gemspec and version.rb files to the string
+# in _version_.
 def set_version(version)
   file_sub(GEMSPEC, /(\.version\s*=\s*).*/, "\\1'#{version}'")
   file_sub(VERSION_RB, /^(\s*VERSION\s*=\s*).*/, "\\1'#{version}'")

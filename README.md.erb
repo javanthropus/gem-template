@@ -8,12 +8,12 @@
 
 <%= word_wrap(spec.summary) %>
 
-## LINKS
+## Links
 
 * Homepage :: <%= spec.homepage %>
 * Source :: http://example.com/example/gem-template.git
 
-## DESCRIPTION
+## Description
 
 <%= spec.description -%>
 
@@ -26,7 +26,7 @@
 
 * None so far...
 
-## SYNOPSIS
+## Synopsis
 
 ```ruby
 require 'gem-template'
@@ -34,7 +34,7 @@ require 'gem-template'
 GemTemplate.hello!
 ```
 
-## REQUIREMENTS
+## Requirements
 
 <% if spec.runtime_dependencies.empty? -%>
 None
@@ -42,24 +42,6 @@ None
 <%   spec.runtime_dependencies.each do |dependency| -%>
 * <%= dependency %>
 <%   end -%>
-<% end -%>
-
-## DEVELOPERS
-
-After checking out the source, run:
-
-    $ bundle install
-    $ bundle exec rake test yard
-
-This will install all dependencies, run the tests/specs, and generate the
-documentation.
-
-## AUTHORS
-
-Thanks to all contributors.  Without your help this project would not exist.
-
-<% spec.authors.zip(spec.email).each do |author, email| -%>
-* <%= author %> :: <%= email %>
 <% end -%>
 
 ## Contributing
@@ -72,7 +54,25 @@ encouraged.
 3. Add tests for the fix or feature.
 4. Make a pull request.
 
-## LICENSE
+## Development
+
+After checking out the source, run:
+
+    $ bundle install
+    $ bundle exec rake test yard
+
+This will install all dependencies, run the tests/specs, and generate the
+documentation.
+
+## Authors
+
+Thanks to all contributors.  Without your help this project would not exist.
+
+<% spec.authors.zip(spec.email).each do |author, email| -%>
+* <%= author %> :: <%= email %>
+<% end -%>
+
+## License
 
 ```
 <%= File.read('LICENSE') -%>

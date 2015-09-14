@@ -14,11 +14,11 @@ This is the long description about your gem.  Write a few sentences to entice
 people to give it a try.
   EOD
 
-  s.add_development_dependency('rake', '~> 10.1', '> 10.1.1')
-  s.add_development_dependency('minitest', '~> 5.3', '> 5.3.1')
-  s.add_development_dependency('yard', '~> 0.8.7', '> 0.8.7.3')
-  s.add_development_dependency('redcarpet', '~> 3.1', '> 3.1.0')
-  s.add_development_dependency('github-markup', '~> 1.0', '> 1.0.2')
+  s.add_development_dependency('rake', '~> 10.1', '>= 10.1.2')
+  s.add_development_dependency('minitest', '~> 5.8', '>= 5.8.0')
+  s.add_development_dependency('yard', '~> 0.8.7', '>= 0.8.7.4')
+  s.add_development_dependency('redcarpet', '~> 3.1', '>= 3.1.1')
+  s.add_development_dependency('github-markup', '~> 1.0', '>= 1.0.3')
   s.add_development_dependency('pry', '~> 0')
 
   # Explicitly list all non-test files that should be included into the gem

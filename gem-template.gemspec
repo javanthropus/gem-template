@@ -15,7 +15,8 @@ people to give it a try.
   EOD
 
   s.add_development_dependency('rake', '~> 10.1', '>= 10.1.2')
-  s.add_development_dependency('minitest', '~> 5.8', '>= 5.8.0')
+  s.add_development_dependency('minitest', '~> 5.9')
+  s.add_development_dependency('simplecov', '~> 0.11')
   s.add_development_dependency('yard', '~> 0.8.7', '>= 0.8.7.4')
   s.add_development_dependency('redcarpet', '~> 3.1', '>= 3.1.1')
   s.add_development_dependency('github-markup', '~> 1.0', '>= 1.0.3')
@@ -34,6 +35,7 @@ people to give it a try.
   )
   # Explicitly list all test files that should be included into the gem here.
   s.test_files   = %w(
+    spec/spec_helper.rb
   )
 
   s.require_path = 'lib'

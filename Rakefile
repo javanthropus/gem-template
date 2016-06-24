@@ -48,7 +48,7 @@ PKG_FILES = FileList.new(Dir.glob('**/*', File::FNM_DOTMATCH)) do |files|
   files.exclude(%r{^.bundle([/\\]|$)})
   files.exclude(%r{^vendor/bundle([/\\]|$)})
   # Exclude generated content, except for the README file.
-  files.exclude(%r{^(pkg|doc|.yardoc)([/\\]|$)})
+  files.exclude(%r{^(pkg|doc|.yardoc|coverage)([/\\]|$)})
   # Exclude Rubinius compiled Ruby files.
   files.exclude('**/*.rbc')
 end
